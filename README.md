@@ -13,12 +13,14 @@ Install these libraries using pip if you don’t have them already:
 
 pip install beautifulsoup4 requests lxml
 
+
 Steps Followed 🛠️
 
 1. Imported Required Libraries
 
 from bs4 import BeautifulSoup
 import requests
+import pandas as pd
 
 
 
@@ -41,7 +43,7 @@ soup = BeautifulSoup(response.content, 'lxml')
 
 ⸻
 
-4. Printed the Beautiful Soup Object (Prettified)
+4. Printed the Beautiful Soup Object (Optional)
 
 print(soup.prettify())
 
@@ -49,7 +51,7 @@ print(soup.prettify())
 
 ⸻
 
-5. Printed the Webpage Title
+5. Printed the Webpage Title (Optional)
 
 print(soup.title)
 print(soup.title.string)
@@ -63,5 +65,11 @@ print(soup.title.string)
 right_table = soup.find('table', class_='wikitable sortable')
 right_table
 
+
+
+7. Converted the Extracted Data into a DataFrame
+
+df = pd.DataFrame(data)
+print(df)
 
 
